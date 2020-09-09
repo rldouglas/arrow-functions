@@ -46,11 +46,18 @@ Create a function `teamCities` that prints out the following for each team in th
 `${team} is located in ${city} and has won $${titles} ${league} titles`
 */
 function teamCities(data) {
-    let teamInfo = data.forEach(funtion (team)){
-        console.log()
+    let teamInfo = data.forEach(function(team) {
+        console.log(`${team.name} is located in ${team.city} and has won $
+        {team.titles} ${team.league} titles`)
+    })
+       
     }
-
+let teamCities = (data) => {
+    let teamInfo = data.forEach(team =>
+        console.log(`${team.name} is located in ${team.city} and has won $
+        {team.titles} ${team.league} titles`))
 }
+console.log(teamCities(soccerClubs))
 
 
 // Task 2
@@ -75,13 +82,13 @@ console.log(bestTeams(soccerClubs))
 Create a new array `teamCountries` that contains a team's name and country
 Example: `Manchester United is located in England`
 */
-function teamCountries(datat) {
+function teamCountries(data) {
     let teamNames = data.map(function(team) {
         return `${team.name} is located in ${team.country}`
     })
     return teamNames
 }
-teamCountries(soccerClubs)
+console.log(teamCountries(soccerClubs))
 
 // Task 4
 
@@ -96,5 +103,4 @@ Print the total number of titles win by teams in Germany and the Netherlands
 /* 
 Create a new array of each team's name sorted in alphabetical order
 */
-
 
