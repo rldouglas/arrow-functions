@@ -45,6 +45,12 @@ function scoreKeeper(){
 Create a function `teamCities` that prints out the following for each team in the array 
 `${team} is located in ${city} and has won $${titles} ${league} titles`
 */
+function teamCities(data) {
+    let teamInfo = data.forEach(funtion (team)){
+        console.log()
+    }
+
+}
 
 
 // Task 2
@@ -52,6 +58,15 @@ Create a function `teamCities` that prints out the following for each team in th
 /* 
 Create a new array `bestTeams` that contains all teams that have won over 20 titles
 */
+function bestTeams(data) {
+    let filteredInfo = data.filter(function(team) {
+        if(team.titles >= 20) {
+            return team
+        }
+    })
+    return filteredInfo
+}
+console.log(bestTeams(soccerClubs))
 
 
 // Task 3
@@ -60,13 +75,20 @@ Create a new array `bestTeams` that contains all teams that have won over 20 tit
 Create a new array `teamCountries` that contains a team's name and country
 Example: `Manchester United is located in England`
 */
-
+function teamCountries(datat) {
+    let teamNames = data.map(function(team) {
+        return `${team.name} is located in ${team.country}`
+    })
+    return teamNames
+}
+teamCountries(soccerClubs)
 
 // Task 4
 
 /* 
 Print the total number of titles win by teams in Germany and the Netherlands
 */
+
 
 
 // Task 5
